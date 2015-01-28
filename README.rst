@@ -7,14 +7,36 @@ About This Plugin
 ToggleWrap is a Vim plugin to make working 
 with and without text wrapping more pleasant.
 
-Project page: https://github.com/landonb/dubs_toggle_textwrap
-
 This plugin was inspired by
 `code by Harold Giménez
 <http://awesomeful.net/posts/57-small-collection-of-useful-vim-tricks>`__.
 See also his
 `vimrc on github
 <http://github.com/hgimenez/vimfiles/blob/c07ac584cbc477a0619c435df26a590a88c3e5a2/vimrc#L72-122>`__.
+
+Install Plugin
+--------------
+
+Standard Pathogen installation:
+
+.. code-block:: bash
+
+   cd ~/.vim/bundle/
+   git clone https://github.com/landonb/dubs_toggle_textwrap.git
+
+Or, Standard submodule installation:
+
+.. code-block:: bash
+
+   cd ~/.vim/bundle/
+   git submodule add https://github.com/landonb/dubs_toggle_textwrap.git
+
+Online help:
+
+.. code-block:: vim
+
+   :Helptags
+   :help dubs-toggle-textwrap
 
 Usage
 -----
