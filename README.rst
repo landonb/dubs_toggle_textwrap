@@ -4,7 +4,7 @@ Dubsacks Vim — ToggleWrap
 About This Plugin
 -----------------
 
-ToggleWrap is a Vim plugin to make working 
+ToggleWrap is a Vim plugin to make working
 with and without text wrapping more pleasant.
 
 This plugin was inspired by
@@ -54,7 +54,7 @@ boundaries.
 Why ":set wrap" Isn't Enough
 ----------------------------
 
-The ``wrap`` option does exactly what it says -- 
+The ``wrap`` option does exactly what it says --
 it visually wraps text that otherwise would
 extend past the right edge of a window.
 
@@ -64,25 +64,25 @@ notice something -- using ``<Up>``, ``<Down>``,
 ``<Home>``, and ``<End>`` keys applies to the
 logical text line, not to the visual line.
 
-E.g., suppose a long line is wrapped and now 
-spans four visual lines in a window; if you 
-put the cursor at the start of the line of 
-text and then press ``<Down>``, rather than moving 
-the cursor down by one visual line, the 
-cursor instead jumps four visuals lines down 
-to the next actual line in the document (i.e., 
+E.g., suppose a long line is wrapped and now
+spans four visual lines in a window; if you
+put the cursor at the start of the line of
+text and then press ``<Down>``, rather than moving
+the cursor down by one visual line, the
+cursor instead jumps four visuals lines down
+to the next actual line in the document (i.e.,
 past the next newline it finds).
 
-Another e.g., if you press ``<Home>``, the cursor 
-jumps to the logical start of the line, which 
+Another e.g., if you press ``<Home>``, the cursor
+jumps to the logical start of the line, which
 may be on a visual line above the current one.
 
-Fortunately, Vim supports visual line 
+Fortunately, Vim supports visual line
 navigation as well as logical line navigation.
 So now, when in wrap mode, we remap ``<Up>`` and
 ``<Down>`` to move the cursor by one visual line
 rather than by one logical line, and ``<Home>``
-and ``<End>`` move the cursor to the start and end 
+and ``<End>`` move the cursor to the start and end
 of the current visual line, respectively.
 
 Key Mappings
