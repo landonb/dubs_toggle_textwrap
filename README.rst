@@ -1,5 +1,5 @@
-Dubsacks Vim — ToggleWrap
-=========================
+Dubs Vim — ToggleWrap
+=====================
 
 About This Plugin
 -----------------

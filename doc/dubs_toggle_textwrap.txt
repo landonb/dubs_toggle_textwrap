@@ -1,6 +1,6 @@
 *dubs_toggle_textwrap.txt*	For Vim version 7.4.	Last change: 2015 Jan 23
 
-Dubsacks Vim -- ToggleWrap~
+Dubs Vim -- ToggleWrap~
 
 LINE WRAPPING SMART TOGGLE		*dubs-toggle-textwrap*
 
