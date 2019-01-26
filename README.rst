@@ -1,8 +1,11 @@
-Dubs Vim — ToggleWrap
-=====================
+#############################
+Dubs Vim |em_dash| ToggleWrap
+#############################
+
+.. |em_dash| unicode:: 0x2014 .. em dash
 
 About This Plugin
------------------
+=================
 
 ToggleWrap is a Vim plugin to make working
 with and without text wrapping more pleasant.
@@ -15,7 +18,7 @@ See also his
 <http://github.com/hgimenez/vimfiles/blob/c07ac584cbc477a0619c435df26a590a88c3e5a2/vimrc#L72-122>`__.
 
 Install Plugin
---------------
+==============
 
 Standard Pathogen installation:
 
@@ -39,7 +42,7 @@ Online help:
    :help dubs-toggle-textwrap
 
 Usage
------
+=====
 
 Type ``\w`` to toggle line wrapping on and off,
 rather than using ``set wrap`` and ``set nowrap``.
@@ -52,7 +55,7 @@ navigation is set to traverse only logical
 boundaries.
 
 Why ":set wrap" Isn't Enough
-----------------------------
+============================
 
 The ``wrap`` option does exactly what it says --
 it visually wraps text that otherwise would
@@ -86,7 +89,7 @@ and ``<End>`` move the cursor to the start and end
 of the current visual line, respectively.
 
 Key Mappings
-------------
+============
 
 =================================  ==================================  ==============================================================================
  Key Mapping                        Description                         Notes
