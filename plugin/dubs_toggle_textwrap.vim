@@ -35,7 +35,7 @@ endfunction
 
 " Toggle wrapping with \w
 " -------------------------
-" SEE_ALSO/2020-05-10: vim-surround also toggles wrap: `[ow`, `]ow`, and `yow`.
+" CALSO/2020-05-10: vim-surround also toggles wrap: `[ow`, `]ow`, and `yow`.
 noremap <silent> <Leader>w :call <SID>ToggleWrap()<CR>
 
 " WrapIt
