@@ -100,12 +100,12 @@ function s:WrapIt()
   " traverse visual boundaries, not logical ones 
   " (make sure to use <buffer> so it only applies 
   " to the current buffer).
-  nnoremap  <buffer> <silent> k gk
-  nnoremap  <buffer> <silent> j gj
-  nnoremap  <buffer> <silent> <Up>   gk
-  nnoremap  <buffer> <silent> <Down> gj
-  nnoremap  <buffer> <silent> <Home> g<Home>
-  nnoremap  <buffer> <silent> <End>  g<End>
+  nnoremap <buffer> <silent> k gk
+  nnoremap <buffer> <silent> j gj
+  nnoremap <buffer> <silent> <Up>   gk
+  nnoremap <buffer> <silent> <Down> gj
+  nnoremap <buffer> <silent> <Home> g<Home>
+  nnoremap <buffer> <silent> <End>  g<End>
   inoremap <buffer> <silent> <Up>   <C-o>gk
   inoremap <buffer> <silent> <Down> <C-o>gj
   inoremap <buffer> <silent> <Home> <C-o>g<Home>
@@ -136,12 +136,12 @@ function s:UnwrapIt()
   " rather than using <Right>, hit <End>.
   " TODO This is interesting, but is it helpful?
   "set virtualedit=all
-  nnoremap  <buffer> <silent> k k
-  nnoremap  <buffer> <silent> j j
-  nnoremap  <buffer> <silent> <Up>   k
-  nnoremap  <buffer> <silent> <Down> j
-  nnoremap  <buffer> <silent> <Home> <Home>
-  nnoremap  <buffer> <silent> <End>  <End>
+  nnoremap <buffer> <silent> k k
+  nnoremap <buffer> <silent> j j
+  nnoremap <buffer> <silent> <Up>   k
+  nnoremap <buffer> <silent> <Down> j
+  nnoremap <buffer> <silent> <Home> <Home>
+  nnoremap <buffer> <silent> <End>  <End>
   inoremap <buffer> <silent> <Up>   <C-o>k
   inoremap <buffer> <silent> <Down> <C-o>j
   inoremap <buffer> <silent> <Home> <C-o><Home>
