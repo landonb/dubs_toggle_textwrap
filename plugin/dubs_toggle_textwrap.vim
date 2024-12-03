@@ -19,9 +19,9 @@ let g:plugin_dubs_toggle_textwrap = 1
 
 " ToggleWrap function
 " -------------------------
-" ToggleWrap toggles the wrap options on or 
-" off. The WrapIt() and UnwrapIt() functions 
-" take care of massaging the environment to 
+" ToggleWrap toggles the wrap options on or
+" off. The WrapIt() and UnwrapIt() functions
+" take care of massaging the environment to
 " be more functional in either mode.
 function s:ToggleWrap()
   if &wrap
@@ -41,43 +41,43 @@ noremap <silent> <Leader>w :call <SID>ToggleWrap()<CR>
 " WrapIt
 " -------------------------
 function s:WrapIt()
-  " Turn on wrapping (whereby lines are 
+  " Turn on wrapping (whereby lines are
   " wrapped as soon as they hit the right
   " edge of the window)
   set wrap
-  " Tell wrapping to logically wrap at word 
+  " Tell wrapping to logically wrap at word
   " boundaries, so they're easier to read
   set linebreak
   " Disable virtualedit, which ...
-  " TODO Not sure we should be setting 
+  " TODO Not sure we should be setting
   "      virtualedit=all in UnwrapIt()
   "set virtualedit=
-  " Set the characters the linebreak option 
+  " Set the characters the linebreak option
   " uses to determine where to break the line.
-  " NOTE This is breakat's default setting 
-  "      ... so I'm not sure setting this is 
+  " NOTE This is breakat's default setting
+  "      ... so I'm not sure setting this is
   "      really all that necessary...
-  "      unless maybe another call in UnwrapIt() 
+  "      unless maybe another call in UnwrapIt()
   "      affects breakat?
   "set breakat=\ ^I!@*-+;:,./?
-  " Add a '>' character to the start of every 
+  " Add a '>' character to the start of every
   " wrapped line
-  " NOTE This sounds nice, but -- regardless that 
-  "      I can't get it to work on Windows -- all 
+  " NOTE This sounds nice, but -- regardless that
+  "      I can't get it to work on Windows -- all
   "      you really need is line numbers.
   "set showbreak=>
   " display defaults to ""; adding lastline means:
-  "   "When included, as much as possible of the 
-  "    last line in a window will be displayed.  
-  "    When not included, last line that doesn't 
+  "   "When included, as much as possible of the
+  "    last line in a window will be displayed.
+  "    When not included, last line that doesn't
   "    fit is replaced with "@" lines."
-  "  In other words, don't just show a bunch of 
-  "  empty visual lines because Vim can't fit the 
+  "  In other words, don't just show a bunch of
+  "  empty visual lines because Vim can't fit the
   "  whole logical line in view!
   setlocal display+=lastline
-  " Finally, remap navigation keys so they 
-  " traverse visual boundaries, not logical ones 
-  " (make sure to use <buffer> so it only applies 
+  " Finally, remap navigation keys so they
+  " traverse visual boundaries, not logical ones
+  " (make sure to use <buffer> so it only applies
   " to the current buffer).
   nnoremap <buffer> <silent> k gk
   nnoremap <buffer> <silent> j gj
@@ -94,22 +94,22 @@ function s:WrapIt()
   snoremap <buffer> <silent> <Home> <C-o><Esc>g<Home>
   snoremap <buffer> <silent> <End>  <C-o><Esc>g<End>
 endfunction
- 
+
 " UnwrapIt
 " -------------------------
-" Undoes (resets back to normal) 
+" Undoes (resets back to normal)
 " everything WrapIt() changed
 function s:UnwrapIt()
   set nowrap
-  "   Setting virtualedit=all allows you 
-  " to move the cursor past the end of 
-  " a logical line of text (or even over 
-  " the individual visual space characters 
-  " used to represent a logical <Tab>). If 
-  " you insert, Vim just pads from the end 
-  " of the logical line to the cursor with 
+  "   Setting virtualedit=all allows you
+  " to move the cursor past the end of
+  " a logical line of text (or even over
+  " the individual visual space characters
+  " used to represent a logical <Tab>). If
+  " you insert, Vim just pads from the end
+  " of the logical line to the cursor with
   " spaces.
-  "   To really see the end of a logical line, 
+  "   To really see the end of a logical line,
   " rather than using <Right>, hit <End>.
   " TODO This is interesting, but is it helpful?
   "set virtualedit=all
@@ -131,9 +131,9 @@ endfunction
 
 " Fix environment on Vim startup
 " -------------------------
-" The following runs when Vim sources 
-" this file (probably when Vim is 
-" starting), so we should fix the 
+" The following runs when Vim sources
+" this file (probably when Vim is
+" starting), so we should fix the
 " environment here if we set to wrap.
 if &wrap
   call s:WrapIt()
