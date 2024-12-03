@@ -49,9 +49,9 @@ function s:WrapIt()
   " boundaries, so they're easier to read
   set linebreak
   " Disable virtualedit, which ...
-  " TODO Not sure we should be setting
+  " NOTE Not sure we should be setting
   "      virtualedit=all in UnwrapIt()
-  "set virtualedit=
+  "  set virtualedit=
   " Set the characters the linebreak option
   " uses to determine where to break the line.
   " NOTE This is breakat's default setting
@@ -101,7 +101,7 @@ endfunction
 " everything WrapIt() changed
 function s:UnwrapIt()
   set nowrap
-  "   Setting virtualedit=all allows you
+  " Setting virtualedit=all allows you
   " to move the cursor past the end of
   " a logical line of text (or even over
   " the individual visual space characters
@@ -111,8 +111,9 @@ function s:UnwrapIt()
   " spaces.
   "   To really see the end of a logical line,
   " rather than using <Right>, hit <End>.
-  " TODO This is interesting, but is it helpful?
-  "set virtualedit=all
+  " MAYBE/2015-01-26: &virtualedit is interesting,
+  " but is it helpful?
+  "  set virtualedit=all
   nnoremap <buffer> <silent> k k
   nnoremap <buffer> <silent> j j
   nnoremap <buffer> <silent> <Up>   k
