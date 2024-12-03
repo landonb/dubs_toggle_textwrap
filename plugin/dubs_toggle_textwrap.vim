@@ -91,10 +91,8 @@ function s:WrapIt()
   inoremap <buffer> <silent> <End>  <C-o>g<End>
   snoremap <buffer> <silent> <Up>   <C-o><Esc>gk
   snoremap <buffer> <silent> <Down> <C-o><Esc>gj
-  snoremap <buffer> <silent> <Home> 
-            \ <C-o><Esc>g<Home>
-  snoremap <buffer> <silent> <End>  
-            \ <C-o><Esc>g<End>
+  snoremap <buffer> <silent> <Home> <C-o><Esc>g<Home>
+  snoremap <buffer> <silent> <End>  <C-o><Esc>g<End>
 endfunction
  
 " UnwrapIt
