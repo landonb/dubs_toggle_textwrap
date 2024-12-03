@@ -77,22 +77,20 @@ function s:WrapIt()
   setlocal display+=lastline
   " Finally, remap navigation keys so they
   " traverse visual boundaries, not logical ones
-  " (make sure to use <buffer> so it only applies
-  " to the current buffer).
-  nnoremap <buffer> <silent> k gk
-  nnoremap <buffer> <silent> j gj
-  nnoremap <buffer> <silent> <Up>   gk
-  nnoremap <buffer> <silent> <Down> gj
-  nnoremap <buffer> <silent> <Home> g<Home>
-  nnoremap <buffer> <silent> <End>  g<End>
-  inoremap <buffer> <silent> <Up>   <C-o>gk
-  inoremap <buffer> <silent> <Down> <C-o>gj
-  inoremap <buffer> <silent> <Home> <C-o>g<Home>
-  inoremap <buffer> <silent> <End>  <C-o>g<End>
-  snoremap <buffer> <silent> <Up>   <C-o><Esc>gk
-  snoremap <buffer> <silent> <Down> <C-o><Esc>gj
-  snoremap <buffer> <silent> <Home> <C-o><Esc>g<Home>
-  snoremap <buffer> <silent> <End>  <C-o><Esc>g<End>
+  nnoremap <silent> k gk
+  nnoremap <silent> j gj
+  nnoremap <silent> <Up>   gk
+  nnoremap <silent> <Down> gj
+  nnoremap <silent> <Home> g<Home>
+  nnoremap <silent> <End>  g<End>
+  inoremap <silent> <Up>   <C-o>gk
+  inoremap <silent> <Down> <C-o>gj
+  inoremap <silent> <Home> <C-o>g<Home>
+  inoremap <silent> <End>  <C-o>g<End>
+  snoremap <silent> <Up>   <C-o><Esc>gk
+  snoremap <silent> <Down> <C-o><Esc>gj
+  snoremap <silent> <Home> <C-o><Esc>g<Home>
+  snoremap <silent> <End>  <C-o><Esc>g<End>
 endfunction
 
 " UnwrapIt
@@ -114,20 +112,20 @@ function s:UnwrapIt()
   " MAYBE/2015-01-26: &virtualedit is interesting,
   " but is it helpful?
   "  set virtualedit=all
-  nnoremap <buffer> <silent> k k
-  nnoremap <buffer> <silent> j j
-  nnoremap <buffer> <silent> <Up>   k
-  nnoremap <buffer> <silent> <Down> j
-  nnoremap <buffer> <silent> <Home> <Home>
-  nnoremap <buffer> <silent> <End>  <End>
-  inoremap <buffer> <silent> <Up>   <C-o>k
-  inoremap <buffer> <silent> <Down> <C-o>j
-  inoremap <buffer> <silent> <Home> <C-o><Home>
-  inoremap <buffer> <silent> <End>  <C-o><End>
-  snoremap <buffer> <silent> <Up>   <C-o>k
-  snoremap <buffer> <silent> <Down> <C-o>j
-  snoremap <buffer> <silent> <Home> <C-o><Home>
-  snoremap <buffer> <silent> <End>  <C-o><End>
+  nnoremap <silent> k k
+  nnoremap <silent> j j
+  nnoremap <silent> <Up>   k
+  nnoremap <silent> <Down> j
+  nnoremap <silent> <Home> <Home>
+  nnoremap <silent> <End>  <End>
+  inoremap <silent> <Up>   <C-o>k
+  inoremap <silent> <Down> <C-o>j
+  inoremap <silent> <Home> <C-o><Home>
+  inoremap <silent> <End>  <C-o><End>
+  snoremap <silent> <Up>   <C-o>k
+  snoremap <silent> <Down> <C-o>j
+  snoremap <silent> <Home> <C-o><Home>
+  snoremap <silent> <End>  <C-o><End>
 endfunction
 
 " Fix environment on Vim startup
@@ -140,12 +138,31 @@ if &wrap
   call s:WrapIt()
 endif
 
-" Don't forget new buffers!
-" -------------------------
-autocmd BufWinEnter *
-  \ if &wrap |
-  \   call <SID>WrapIt() |
-  \ endif
+" HSTRY/2024-12-03: This plugin used to restrict the maps
+" to each buffer, e.g.,
+"
+"   function s:WrapIt()
+"     ...
+"     nnoremap <buffer> <silent> k gk
+"     nnoremap <buffer> <silent> j gj
+"     ...
+"
+" But that doesn't seem to matter (i.e., when whether
+" &wrap or &nowrap).
+" - Also we need to place nice with coc.nvim, which defines
+"   <Up> and <Down> maps to work with the suggestion popup
+"   menu.
+"
+" So the <buffer> limitations have been removed, along with
+" the autocommand that ran to ensure the new buffers were
+" wired correctly too:
+"
+"   " Don't forget new buffers!
+"   " -------------------------
+"   autocmd BufWinEnter *
+"     \ if &wrap |
+"     \   call <SID>WrapIt() |
+"     \ endif
 
 " ------------------------------------------
 " ----------------------------------- EOF --
