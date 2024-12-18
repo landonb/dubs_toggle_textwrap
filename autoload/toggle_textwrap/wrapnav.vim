@@ -41,8 +41,10 @@ function! g:toggle_textwrap#wrapnav#EnableWrapNav()
   setlocal display+=lastline
   " Finally, remap navigation keys so they
   " traverse visual boundaries, not logical ones
-  nnoremap <silent> k gk
-  nnoremap <silent> j gj
+  if !exists("g:toggle_textwrap_disable_kj") || !g:toggle_textwrap_disable_kj
+    nnoremap <silent> k gk
+    nnoremap <silent> j gj
+  endif
   nnoremap <silent> <Up>   gk
   nnoremap <silent> <Down> gj
   nnoremap <silent> <Home> g<Home>
@@ -74,8 +76,10 @@ function! g:toggle_textwrap#wrapnav#DisableWrapNav()
   " MAYBE/2015-01-26: &virtualedit is interesting,
   " but is it helpful?
   "  set virtualedit=all
-  nnoremap <silent> k k
-  nnoremap <silent> j j
+  if !exists("g:toggle_textwrap_disable_kj") || !g:toggle_textwrap_disable_kj
+    nnoremap <silent> k k
+    nnoremap <silent> j j
+  endif
   nnoremap <silent> <Up>   k
   nnoremap <silent> <Down> j
   nnoremap <silent> <Home> <Home>
