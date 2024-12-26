@@ -11,10 +11,20 @@
 "
 "   tl;dr, use \w to smartly toggle wrapping.
 
-" Poo-poo on the double-load
-if exists("g:plugin_dubs_toggle_textwrap") || &cp
+" -------------------------------------------------------------------
+
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
+
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet! g:plugin_dubs_toggle_textwrap
+endif
+
+if exists('g:plugin_dubs_toggle_textwrap') || &cp
+
   finish
 endif
+
 let g:plugin_dubs_toggle_textwrap = 1
 
 " -------------------------------------------------------------------
