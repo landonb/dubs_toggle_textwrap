@@ -2,11 +2,11 @@
 " Project: https://github.com/landonb/dubs_toggle_textwrap
 " License: GPLv3
 " Summary: Dubs Vim ToggleWrap
+
 " -------------------------------------------------------------------
 
-" ------------------------------------------
-" About:
-
+" ABOUT:
+"
 " For notes and usage, try :help dubs-toggle-textwrap.
 "
 "   tl;dr, use \w to smartly toggle wrapping.
@@ -16,6 +16,8 @@ if exists("g:plugin_dubs_toggle_textwrap") || &cp
   finish
 endif
 let g:plugin_dubs_toggle_textwrap = 1
+
+" -------------------------------------------------------------------
 
 " ToggleWrap function
 " -------------------------
