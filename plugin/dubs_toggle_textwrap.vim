@@ -35,9 +35,6 @@ let g:plugin_dubs_toggle_textwrap = 1
 " options on or off. They take care of adjusting the
 " environment to be more functional in either mode (at
 " least more functional per the author's preferences).
-"
-" CXREF:
-" ~/.vim/pack/landonb/start/dubs_toggle_textwrap/autoload/toggle_textwrap/wrapnav.vim
 function s:ToggleWrap()
   if &wrap
     echo "Wrap OFF"
