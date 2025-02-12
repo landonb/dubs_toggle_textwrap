@@ -1,6 +1,6 @@
 *dubs_toggle_textwrap.txt*	For Vim version 7.4.	Last change: 2015 Jan 23
 
-Dubs Vim -- ToggleWrap~
+Dubs Vim -- ToggleWrap ~
 
 LINE WRAPPING SMART TOGGLE		*dubs-toggle-textwrap*
 
@@ -22,7 +22,7 @@ This plugin was inspired by code by Harold Giménez
 ==============================================================================
 2. Smartly Toggle Commands				*dubs-togglr-commands*
 
-Interactive Entity Table~
+Interactive Entity Table ~
 
 				*<Leader>dw* *\dw*
 <Leader>dw		Toggle line wrapping on and off, rather
@@ -35,7 +35,7 @@ Interactive Entity Table~
 			navigation is set to traverse only logical
 			boundaries.
 
-Why ':set wrap' Isn't Enough~
+Why ':set wrap' Isn't Enough ~
 
 The 'wrap' option does exactly what it says -- 
 it visually wraps text that otherwise would
