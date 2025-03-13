@@ -10,6 +10,7 @@ function! g:toggle_textwrap#wrapnav#EnableWrapNav()
   set wrap
   " Tell wrapping to logically wrap at word
   " boundaries, so they're easier to read
+  " - Disabled by default in Neovim; enabled by LazyVim.
   set linebreak
   " Disable virtualedit, which ...
   " NOTE Not sure we should be setting virtualedit=all
@@ -38,6 +39,8 @@ function! g:toggle_textwrap#wrapnav#EnableWrapNav()
   "  In other words, don't just show a bunch of
   "  empty visual lines because Vim can't fit the
   "  whole logical line in view!
+  " - Neovim default is &display=lastline;
+  "   and disabled by default in Vim.
   setlocal display+=lastline
   " Finally, remap navigation keys so they
   " traverse visual boundaries, not logical ones
