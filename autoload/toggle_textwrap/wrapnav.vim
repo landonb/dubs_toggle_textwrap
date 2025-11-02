@@ -50,16 +50,16 @@ function! g:toggle_textwrap#wrapnav#EnableWrapNav()
   endif
   nnoremap <silent> <Up>   gk
   nnoremap <silent> <Down> gj
-  nnoremap <silent> <Home> g<Home>
-  nnoremap <silent> <End>  g<End>
+  nnoremap <silent> <Home> g0
+  nnoremap <silent> <End>  g$
   inoremap <silent> <Up>   <C-o>gk
   inoremap <silent> <Down> <C-o>gj
-  inoremap <silent> <Home> <C-o>g<Home>
-  inoremap <silent> <End>  <C-o>g<End>
+  inoremap <silent> <Home> <C-o>g0
+  inoremap <silent> <End>  <C-o>g$
   snoremap <silent> <Up>   <C-o><Esc>gk
   snoremap <silent> <Down> <C-o><Esc>gj
-  snoremap <silent> <Home> <C-o><Esc>g<Home>
-  snoremap <silent> <End>  <C-o><Esc>g<End>
+  snoremap <silent> <Home> <C-o><Esc>g0
+  snoremap <silent> <End>  <C-o><Esc>g$
 endfunction
 
 " Undoes (resets back to normal) everything changed
@@ -85,15 +85,15 @@ function! g:toggle_textwrap#wrapnav#DisableWrapNav()
   endif
   nnoremap <silent> <Up>   k
   nnoremap <silent> <Down> j
-  nnoremap <silent> <Home> <Home>
-  nnoremap <silent> <End>  <End>
+  nnoremap <silent> <Home> 0
+  nnoremap <silent> <End>  $
   inoremap <silent> <Up>   <C-o>k
   inoremap <silent> <Down> <C-o>j
-  inoremap <silent> <Home> <C-o><Home>
-  inoremap <silent> <End>  <C-o><End>
+  inoremap <silent> <Home> <C-o>0
+  inoremap <silent> <End>  <C-o>$
   snoremap <silent> <Up>   <C-o>k
   snoremap <silent> <Down> <C-o>j
-  snoremap <silent> <Home> <C-o><Home>
-  snoremap <silent> <End>  <C-o><End>
+  snoremap <silent> <Home> <C-o>0
+  snoremap <silent> <End>  <C-o>$
 endfunction
 
