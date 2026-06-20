@@ -24,8 +24,8 @@ This plugin was inspired by code by Harold Giménez
 
 Interactive Entity Table ~
 
-				*<Leader>dw* *\dw*
-<Leader>dw		Toggle line wrapping on and off, rather
+				*<LocalLeader>dw* *\dw*
+<LocalLeader>dw		Toggle line wrapping on and off, rather
 			than using 'set wrap' and 'set nowrap'.
 
 			In addition to being the same command for

@@ -48,8 +48,8 @@ endfunction
 " Toggle wrapping with \w
 " -------------------------
 " CALSO/2020-05-10: vim-surround also toggles wrap: `[ow`, `]ow`, and `yow`.
-" - HSTRY/2024-12-10: Was <Leader>w, but I've coalesced Dubs Vim maps under \d.
-noremap <silent> <Leader>dw :call <SID>ToggleWrap()<CR>
+" - HSTRY/2024-12-10: Was <LocalLeader>w, but I've coalesced Dubs Vim maps under \d.
+noremap <silent> <LocalLeader>dw :call <SID>ToggleWrap()<CR>
 
 
 " Adjust environment on Vim startup
